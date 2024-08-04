@@ -10,15 +10,15 @@ using System.Net;
 
 namespace TurbineRepair
 {
-    public class Turbine
+    public class Turbines
     {
         const double revenuePerkW = 0.12;
         const double technicianCost = 250;
         const double turbineCost = 100;
 
-        private readonly ILogger<Turbine> _logger;
+        private readonly ILogger<Turbines> _logger;
 
-        public Turbine(ILogger<Turbine> logger)
+        public Turbines(ILogger<Turbines> logger)
         {
             _logger = logger;
         }
