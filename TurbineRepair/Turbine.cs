@@ -10,20 +10,20 @@ using System.Net;
 
 namespace TurbineRepair
 {
-    public class Turbines
+    public class Turbine
     {
         const double revenuePerkW = 0.12;
         const double technicianCost = 250;
         const double turbineCost = 100;
 
-        private readonly ILogger<Turbines> _logger;
+        private readonly ILogger<Turbine> _logger;
 
-        public Turbines(ILogger<Turbines> logger)
+        public Turbine(ILogger<Turbine> logger)
         {
             _logger = logger;
         }
 
-        [Function("Turbine")]
+        [Function("TurbineRepair")]
         [OpenApiOperation(operationId: "Run")]
         [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiRequestBody("application/json", typeof(RequestBodyModel),
